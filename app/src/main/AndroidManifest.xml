@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="pl.damianmarkowski.sosk" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".GlobalVars"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".StudentMainScreen"
+            android:label="@string/title_activity_student_main_screen" >
+        </activity>
+        <activity
+            android:name=".SignUpForCourse"
+            android:label="@string/title_activity_sign_up_for_course"
+            android:parentActivityName=".StudentMainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.StudentMainScreen" />
+        </activity>
+        <activity
+            android:name=".TeacherMainScreen"
+            android:label="@string/title_activity_teacher_main_screen" >
+        </activity>
+        <activity
+            android:name=".StudentSchedule"
+            android:label="@string/title_activity_student_schedule"
+            android:parentActivityName=".StudentCourseScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.StudentMainScreen" />
+        </activity>
+        <activity
+            android:name=".StudentLectures"
+            android:label="@string/title_activity_student_lectures"
+            android:parentActivityName=".StudentCourseScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.StudentMainScreen" />
+        </activity>
+        <activity
+            android:name=".StudentPracticalLessons"
+            android:label="@string/title_activity_student_practical_lessons"
+            android:parentActivityName=".StudentCourseScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.StudentMainScreen" />
+        </activity>
+        <activity
+            android:name=".StudentCourseScreen"
+            android:label="@string/title_activity_student_course_screen"
+            android:parentActivityName=".StudentMainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.StudentMainScreen" />
+        </activity>
+        <activity
+            android:name=".TeacherCourseScreen"
+            android:label="@string/title_activity_teacher_course_screen"
+            android:parentActivityName=".TeacherMainScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.TeacherMainScreen" />
+        </activity>
+        <activity
+            android:name=".TeacherSchedule"
+            android:label="@string/title_activity_teacher_schedule"
+            android:parentActivityName=".TeacherCourseScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.TeacherCourseScreen" />
+        </activity>
+        <activity
+            android:name=".TeacherPracticalLessons"
+            android:label="@string/title_activity_teacher_practical_lessons"
+            android:parentActivityName=".TeacherCourseScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.TeacherCourseScreen" />
+        </activity>
+        <activity
+            android:name=".TeacherLectures"
+            android:label="@string/title_activity_teacher_lectures"
+            android:parentActivityName=".TeacherCourseScreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.TeacherCourseScreen" />
+        </activity>
+        <activity
+            android:name=".TeacherStudentScreen"
+            android:label="@string/title_activity_teacher_student_screen"
+            android:parentActivityName=".TeacherLectures" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.TeacherLectures" />
+        </activity>
+        <activity
+            android:name=".TeacherAddTipScreen"
+            android:label="@string/title_activity_teacher_add_tip_screen"
+            android:parentActivityName=".TeacherPracticalLessons" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.TeacherPracticalLessons" />
+        </activity>
+        <activity
+            android:name=".AboutScreen"
+            android:label="@string/title_activity_about_screen"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="pl.damianmarkowski.sosk.MainActivity" />
+        </activity>
+    </application>
+
+</manifest>
